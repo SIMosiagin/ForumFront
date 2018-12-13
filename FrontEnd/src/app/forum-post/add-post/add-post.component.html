@@ -1,0 +1,19 @@
+<ng-template #content let-c="close" let-d="dismiss" class="modal-view">
+  <div class="modal-header">
+    <h4 class="modal-title">Add post</h4>
+  </div>
+  <div class="modal-body">
+    <label class="selSkill">Enter the text</label>
+    <input type="text" [(ngModel)] = "text">
+  </div>
+  <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
+  <button type="button" class="close" aria-label="Ok" (click)="d('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+
+</ng-template>
+
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Add post</button>
+
+
+

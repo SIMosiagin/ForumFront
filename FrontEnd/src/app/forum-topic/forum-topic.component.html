@@ -1,0 +1,17 @@
+<ngForm class="mappingtest">
+  <app-add-topic></app-add-topic>
+
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th >Topic name</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let top of topics">
+      <td [routerLink]="['selectedTopic', top]">{{top.name}}</td>
+    </tr>
+    </tbody>
+  </table>
+</ngForm>

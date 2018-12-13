@@ -1,0 +1,38 @@
+<ngForm class="mappingtest">
+  <app-add-post [topic]="topic"></app-add-post>
+  <table style="width: 100%;">
+    <tbody>
+    <tr *ngFor="let post of posts">
+
+      <td style="width: 25%;">
+        <table style="width: 100%;">
+          <tbody>
+          <tr>
+            <td style="width: 50%;">Post date {{post.create_date}}</td>
+
+          </tr>
+          <tr>
+            <td>User: {{post.user.nickName}}</td>
+
+          </tr>
+          <tr>
+            <td>Email: {{post.user.email}}</td>
+
+          </tr>
+          <tr>
+            <td>Role: {{post.user.role.roleName}}</td>
+
+          </tr>
+          </tbody>
+        </table>
+      </td>
+      <td style="width: 75%;">{{post.text}}</td>
+
+    </tr>
+    </tbody>
+  </table>
+</ngForm>
+
+
+
+
